@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contain{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    font-size: 22px;
+    padding: 50px 20px;
+    width: 100%;
+    box-shadow: 0 0 5px blue;
+    background-color: whitesmoke;
+    line-height: 40px;
+}
+div input{
+    border: 1px solid ;
+    border-radius: 5px;
+    outline: none;
+    font-size: 17px;
+    padding: 5px 10px;
+}
+#btn input{
+    background-color: rgb(35, 41, 208);
+    color: white;
+    padding: 8px;
+    width: 100%;
+    border: none;
+     border-radius: 10px;
+     animation-duration: 1ms;
+}
+#btn input:hover{
+    background-color: rgb(35, 99, 226);
+    transition: 2ms ease-in-out;
+    
+}

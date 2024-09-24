@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="css/register.css" type="text/css">
+</head>
+<body>
+    <div class="contain">
+        <p><a href="/user/login">Login here</a></p>
+        <% if(message) { %>
+            <p><%= message %></p>
+        <% } %>
+        <form name="userReg" method="post" action="/user/register">
+            <div>
+                <label for="firstname">First Name</label>
+                <input type="text" name="firstname" placeholder="Enter your first name">
+            </div>
+    
+            <div>
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname" placeholder="Enter your last name">
+            </div>
+    
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Enter your email">
+            </div>
+    
+            <div>
+                <label for="gender">Gender:</label>
+                <label for="gender" >Male</label>
+                <input type="radio" value="male" name="gender">
+                <label for="gender">Female</label>
+                <input type="radio" value="female" name="gender">
+            </div>
+    
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" placeholder="Set your password">
+            </div>
+    
+            <div>
+                <label for="password"> Comfirm Password</label>
+                <input type="password" name="comPass" placeholder="Comfirm your password">
+            </div>
+            <div>
+                <label for="user-agreement">User policy</label>
+                <input type="checkbox" value="Accepted" name="checkbox">
+            </div>
+            <div id="btn">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </div>
+    <script>
+// const userForm = document.forms.userReg;
+// userForm.addEventListener('submit', (evt) => {
+//     evt.preventDefault()
+//     let method = evt.target.getAttribute('method')
+//     let action = evt.target.getAttribute('action')
+//     let errors = {missing: [],match: true}
+//     let formdata = new FormData(evt.target)
+//     let pass = formdata.has('password') && formdata.get('password').trim() !== '' ? formdata.get('password').trim() : null
+//     for(let [key, value] of formdata.entries()) {
+//         if(value.trim() === '') {
+//             errors.missing = [...errors.missing, key];
+//         } 
+//         if(pass === null || key === 'comPass' && value !== pass) {
+//             errors.match = false  
+//         }
+//     }
+//     if(errors.missing.length > 0 || !errors.match) {
+//         console.log(errors)
+//         return;
+//     }
+//     formdata.delete('comPass')
+//     formdata.delete('checkbox')
+//     let userData = Object.fromEntries(formdata.entries())
+//     console.log(userData)
+//     fetch(`http://${action}`, {
+//         method,
+//         headers: {
+//             'Content-Type': 'application/x-www-form-urlencoded'
+//         },
+//         body: JSON.stringify(userData)
+//     }).then(res => res.json()).then(data => console.log(data))
+
+// })
+    </script>
+</body>
+</html>

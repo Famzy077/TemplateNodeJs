@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.contain{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+form{
+    font-size: 23px;
+    width: 100%;
+    padding: 50px 65px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 5px 0 blue;
+    line-height: 40px;
+}
+div input{
+    padding: 6px 10px;
+}
+#btn input{
+    width: 100%;
+    padding: 7px 10px;
+}

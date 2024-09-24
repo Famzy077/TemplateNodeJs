@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+
+    <p>Welcome <b><%= activeUser.lastname %></b>,</p>
+    <h1>Testing EJS Template</h1>
+    <p><% for( product of products) { %>
+    <p><%= product, products[product] %></p>
+    <% } %></p>
+
+    <form action="/user?_method=DELETE" method="post">
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>
